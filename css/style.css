@@ -14,6 +14,13 @@ body {
   padding-top: 5rem;
 }
 
+@media (max-width: 576px) {
+  body {
+    padding-top: 6rem;
+    /* O más si el navbar ocupa más */
+  }
+}
+
 /* Títulos decorativos (ej: Nandito Lodge) */
 .titulo-decorativo {
   font-family: 'Amatic SC', cursive;
@@ -86,18 +93,18 @@ body {
 
 .carousel-scroll-right,
 .carousel-scroll-left {
-  animation: scroll-horizontal 110s linear infinite;
+  animation: scroll-horizontal 200s linear infinite;
 }
 
 .carousel-scroll-left {
-  animation: scroll-horizontal 110s linear infinite reverse;
+  animation: scroll-horizontal 200s linear infinite reverse;
 }
 
 
 .carousel-img {
   flex: 0 0 auto;
-  width: 18vw;
-  height: 21vw;
+  width: 16vw;
+  height: 19vw;
   object-fit: cover;
   border-radius: 10px;
   transition: transform 0.4s ease-in-out;
@@ -301,4 +308,18 @@ body {
 
 .animate-delay-2 {
   animation-delay: 0.6s;
+}
+
+
+/*Para ajustar tamaño de letras en mobile*/
+@media (max-width: 576px) {
+  .fs-2 {
+    font-size: 1.5rem !important;
+    /* antes 2rem */
+  }
+
+  .fs-5 {
+    font-size: 1rem !important;
+    /* antes 1.25rem */
+  }
 }

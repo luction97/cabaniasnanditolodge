@@ -1,0 +1,304 @@
+/* ===================== */
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===================== */
+/* General */
+body {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
+  padding-top: 5rem;
+}
+
+/* Títulos decorativos (ej: Nandito Lodge) */
+.titulo-decorativo {
+  font-family: 'Amatic SC', cursive;
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  line-height: 1.2;
+}
+
+/* ===================== */
+/* Nav */
+.nav-link {
+  font-weight: bold;
+}
+
+
+/* ===================== */
+/* Logo */
+.logo {
+  max-width: 14rem;
+  width: 100%;
+  height: auto;
+}
+
+.logo-text {
+  font-weight: 700;
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    max-width: 10rem;
+    /* o lo que visualmente te parezca cómodo */
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    max-width: 11rem;
+  }
+}
+
+/* Usás esta en el HTML para ocultar al inicio */
+.invisible-on-load {
+  opacity: 0;
+}
+
+.animate-delay-1 {
+  animation-delay: 0.3s;
+}
+
+/* ===================== */
+/* Carousel personalizado */
+.carousel-fotos {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 100%;
+}
+
+.carousel-img-container {
+  display: flex;
+  gap: 1rem;
+  padding: 0 2rem;
+  width: max-content;
+  /* NUEVO: asegura que el contenido tenga el ancho adecuado */
+  will-change: transform;
+}
+
+.carousel-scroll-right,
+.carousel-scroll-left {
+  animation: scroll-horizontal 110s linear infinite;
+}
+
+.carousel-scroll-left {
+  animation: scroll-horizontal 110s linear infinite reverse;
+}
+
+
+.carousel-img {
+  flex: 0 0 auto;
+  width: 18vw;
+  height: 21vw;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.4s ease-in-out;
+  /* Nueva sombra suave */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.carousel-img:hover {
+  animation-play-state: paused;
+  transform: scale(1.05);
+}
+
+
+@media (max-width: 768px) {
+  .carousel-img {
+    width: 40vw;
+    height: 45vw;
+  }
+}
+
+/* Animaciones carousel */
+@keyframes scroll-horizontal {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Difuminado lateral */
+.carousel-fotos::before,
+.carousel-fotos::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 20px;
+  z-index: 1;
+}
+
+.carousel-fotos::before {
+  left: 0;
+  background: linear-gradient(to right, white, transparent);
+}
+
+.carousel-fotos::after {
+  right: 0;
+  background: linear-gradient(to left, white, transparent);
+}
+
+/* ===================== */
+/* Botón WhatsApp */
+.btn-whatsapp {
+  opacity: 0.8;
+  position: fixed;
+  bottom: 2vh;
+  right: 2vw;
+  z-index: 1000;
+  width: 10vw;
+  height: 10vw;
+  max-width: 70px;
+  max-height: 70px;
+  min-width: 40px;
+  min-height: 40px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: float 4s ease-in-out infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.btn-whatsapp img {
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
+  transition: filter 0.3s ease;
+}
+
+.btn-whatsapp:hover {
+  transform: scale(1.1) translateY(-2px);
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.25);
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-6%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* ===================== */
+/* Botones personalizados */
+.btn-naranja {
+  background-color: #c1450b;
+  color: white;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+  border-radius: 50px;
+  padding: 10px 20px;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-naranja:hover {
+  background-color: #a73a09;
+  color: white;
+}
+
+.btn-naranja-outline {
+  background-color: transparent;
+  color: #c1450b;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+  border: 2px solid #c1450b;
+  border-radius: 50px;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-naranja-outline:hover {
+  background-color: #c1450b;
+  color: white;
+}
+
+/* ===================== */
+/* Mapa */
+.mapa-externo {
+  width: 95vw;
+  max-width: 95vw;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  box-sizing: border-box;
+}
+
+.mapa-container {
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.contenido-central {
+  /* como container-xl de Bootstrap */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ===================== */
+/* Video y experiencia */
+
+#video-cabanas .texto-experiencia {
+  font-size: 1.2rem;
+  line-height: 1.7;
+}
+
+#video-cabanas .texto-experiencia h2 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+#video-cabanas .texto-experiencia ul {
+  padding-left: 1.2rem;
+}
+
+#video-cabanas .texto-experiencia li {
+  margin-bottom: 0.5rem;
+}
+
+/* ===================== */
+/* Animaciones de inicio */
+@keyframes fadeInSlide {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+    /* Empieza más abajo */
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Esta clase NO se pone en el HTML, solo se aplica desde JS */
+.animate-on-load-start {
+  animation: fadeInSlide 2s ease-out forwards;
+}
+
+.animate-delay-2 {
+  animation-delay: 0.6s;
+}

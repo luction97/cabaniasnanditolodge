@@ -1,0 +1,68 @@
+/* ===================== */
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===================== */
+/* General */
+body {
+    background-color: rgb(255, 253, 250);
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+    padding-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+.cabin-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.cabin-gallery img {
+    max-width: 100%;
+    height: auto;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.cabin-gallery img:hover {
+    transform: scale(1.05);
+}
+
+.modal-img {
+    max-width: 100%;
+    max-height: 80vh;
+}
+
+.carousel-item img {
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .carousel-item img {
+        max-height: 250px;
+    }
+}
+
+.modal-img {
+    max-width: 100%;
+    max-height: 80vh;
+}
+
+main {
+    flex: 1;
+}

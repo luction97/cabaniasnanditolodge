@@ -8,17 +8,14 @@
 
 /* ===================== */
 /* General */
-body {
+html, body {
   font-family: 'Quicksand', sans-serif;
   font-weight: 400;
-  padding-top: 5rem;
-}
-
-@media (max-width: 576px) {
-  body {
-    padding-top: 6rem;
-    /* O más si el navbar ocupa más */
-  }
+  padding-top: 3rem;
+  background-color: rgb(255, 253, 250);
+  height: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 /* Títulos decorativos (ej: Nandito Lodge) */
@@ -301,7 +298,7 @@ body {
   }
 }
 
-/* Esta clase NO se pone en el HTML, solo se aplica desde JS */
+/* Esta clase solo se aplica desde JS */
 .animate-on-load-start {
   animation: fadeInSlide 2s ease-out forwards;
 }
@@ -322,4 +319,9 @@ body {
     font-size: 1rem !important;
     /* antes 1.25rem */
   }
+}
+
+
+.title-exp{
+  color: rgb(75, 75, 75);
 }

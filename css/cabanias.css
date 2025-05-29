@@ -16,6 +16,9 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    height: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 
@@ -65,4 +68,63 @@ body {
 
 main {
     flex: 1;
+}
+
+.btn-naranja-rec {
+    background-color: #c1450b;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    border-radius: 10px;
+    padding: 10px 20px;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-naranja:hover {
+    background-color: #a73a09;
+    color: white;
+}
+
+/* Estilo de la modal */
+.modal-content {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    position: relative;
+    /* necesario para el botón absoluto */
+    padding: 0;
+}
+
+/* Botón "X" flotante sobre la imagen */
+.modal-content .btn-close {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    z-index: 1055;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 20%;
+    padding: 0.1rem;
+    width: 2rem;
+    height: 2rem;
+}
+
+/* Imagen centrada dentro del modal */
+.modal-body {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#modalImage {
+    max-height: 90vh;
+    max-width: 100%;
+    object-fit: contain;
+    display: block;
+    border-radius: 0.25rem;
+}
+
+.modal-content .btn-close:hover {
+    background-color: #a73a09;
 }

@@ -46,6 +46,7 @@ html, body {
   font-weight: 700;
   text-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
   font-style: italic;
+  
 }
 
 @media (max-width: 768px) {
@@ -100,8 +101,8 @@ html, body {
 
 .carousel-img {
   flex: 0 0 auto;
-  width: 16vw;
-  height: 19vw;
+  width: 17vw;
+  height: 18vw;
   object-fit: cover;
   border-radius: 10px;
   transition: transform 0.4s ease-in-out;
@@ -206,7 +207,7 @@ html, body {
 /* ===================== */
 /* Botones personalizados */
 .btn-naranja {
-  background-color: #c1450b;
+  background-color: #FE5D26;
   color: white;
   font-family: 'Quicksand', sans-serif;
   font-weight: 600;
@@ -346,7 +347,7 @@ html, body {
 
 
 .title-exp {
-  color: rgb(75, 75, 75);
+  color: #4E1F00;
 }
 
 
@@ -377,4 +378,10 @@ html, body {
 
 .carousel-item .col-md-4 > div {
   min-height: 220px;
+}
+
+
+
+.bg-light{
+  border-radius: 10px;
 }

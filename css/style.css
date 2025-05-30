@@ -237,6 +237,30 @@ html, body {
   color: white;
 }
 
+
+@media (max-width: 576px) {
+
+  .btn-naranja,
+  .btn-naranja-outline {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  header .d-flex {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: stretch;
+    /* que cada botón ocupe todo el ancho del contenedor */
+    width: 90%;
+    /* opcional: para que no llegue a los bordes de la pantalla */
+    margin: 0 auto;
+    /* centrar horizontalmente */
+  }
+}
+
 /* ===================== */
 /* Mapa */
 .mapa-externo {
@@ -321,6 +345,36 @@ html, body {
 }
 
 
-.title-exp{
+.title-exp {
   color: rgb(75, 75, 75);
+}
+
+
+
+/* Forzar ícono + texto en una sola línea */
+.caracteristica {
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+  /* más grande */
+}
+
+/* En móviles, ajustar tamaño si hace falta */
+@media (max-width: 576px) {
+  .caracteristica {
+    font-size: 1.3rem; /* un poco más chico, pero no demasiado */
+  }
+}
+
+
+/*Testimonios*/
+
+.carousel-inner {
+  transition: height 0.5s ease;
+}
+
+.carousel-item .col-md-4 > div {
+  min-height: 220px;
 }

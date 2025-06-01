@@ -300,7 +300,7 @@ html, body {
   min-width: 55px;
   min-height: 55px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  animation: pulse 2.5s infinite;
+  animation: pulse-whatsapp 2.5s infinite;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -320,20 +320,19 @@ html, body {
 .btn-whatsapp:hover {
   transform: scale(1.1) translateY(-2px);
   box-shadow: 0 10px 18px rgba(0, 0, 0, 0.4);
+  animation: none;
 }
 
-/* Animación de pulso */
-@keyframes pulse {
+/* Animación de pulso mejorada */
+@keyframes pulse-whatsapp {
   0% {
     transform: scale(1);
-    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
   }
-
-  70% {
-    transform: scale(1.05);
+  50% {
+    transform: scale(1.03);
     box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
   }
-
   100% {
     transform: scale(1);
     box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
@@ -597,27 +596,204 @@ html, body {
   }
 }
 
+/* Estilos mejorados para el footer */
 footer {
-  font-size: 0.9rem;
-  line-height: 1.6;
-  position: relative;
-  overflow: hidden;
+    flex-shrink: 0;
+    width: 100%;
+    background-color: #191919;
+    position: relative;
+    overflow: hidden;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    padding: 4rem 0 2rem;
 }
 
 footer::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(45deg, rgba(254,93,38,0.05) 0%, rgba(0,0,0,0) 100%);
-  pointer-events: none;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(254,93,38,0.05) 0%, rgba(0,0,0,0) 100%);
+    pointer-events: none;
 }
 
-footer .nav-link:hover {
-  color: #F77F00 !important;
-  text-decoration: none;
+footer .container {
+    position: relative;
+    z-index: 1;
+}
+
+footer .row {
+    margin: 0;
+}
+
+footer .col-lg-4 {
+    padding: 0 1.5rem;
+}
+
+footer img {
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: brightness(0.9);
+}
+
+footer img:hover {
+    transform: scale(1.05);
+    filter: brightness(1);
+}
+
+footer h5 {
+    font-size: 1.2rem;
+    margin-bottom: 1.2rem;
+    position: relative;
+    display: inline-block;
+}
+
+footer h5::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background-color: var(--color-naranja);
+    transition: width 0.3s ease;
+}
+
+footer .text-center h5::after {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+footer .text-lg-end h5::after {
+    left: auto;
+    right: 0;
+}
+
+footer h5:hover::after {
+    width: 60px;
+}
+
+footer .d-flex.flex-column.gap-2 {
+    margin-bottom: 1.5rem;
+}
+
+footer .d-flex.justify-content-center.justify-content-lg-end {
+    margin-top: 1.5rem;
+}
+
+footer .hover-effect {
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 0.2rem 0;
+}
+
+footer .hover-effect::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--color-naranja);
+    transition: width 0.3s ease;
+}
+
+footer .hover-effect:hover {
+    color: var(--color-naranja) !important;
+    transform: translateX(5px);
+}
+
+footer .hover-effect:hover::after {
+    width: 100%;
+}
+
+footer .text-lg-end .hover-effect:hover {
+    transform: translateX(-5px);
+}
+
+footer .text-lg-end .hover-effect::after {
+    left: auto;
+    right: 0;
+}
+
+footer hr {
+    margin: 2rem 0;
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+footer .text-center {
+    padding: 0 1rem;
+}
+
+footer .text-light-emphasis {
+    color: rgba(255, 255, 255, 0.6) !important;
+    font-size: 0.9rem;
+}
+
+footer .text-light-emphasis p {
+    font-size: 0.75rem;
+    margin-top: 0.5rem;
+}
+
+/* Media queries para el footer */
+@media (max-width: 768px) {
+    footer {
+        padding: 3rem 0 1.5rem;
+    }
+
+    footer .row {
+        gap: 2rem;
+    }
+
+    footer .col-lg-4 {
+        text-align: center !important;
+        padding: 0 1rem;
+    }
+
+    footer h5::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    footer .text-lg-end h5::after {
+        left: 50%;
+        right: auto;
+    }
+
+    footer .d-flex.justify-content-lg-end {
+        justify-content: center !important;
+    }
+
+    footer .hover-effect:hover {
+        transform: translateX(0);
+    }
+
+    footer .text-lg-end .hover-effect:hover {
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 576px) {
+    footer {
+        padding: 2rem 0 1rem;
+    }
+
+    footer .row {
+        gap: 1.5rem;
+    }
+
+    footer .col-lg-4 {
+        margin-bottom: 1rem;
+    }
+
+    footer .d-flex.flex-column.gap-2 {
+        gap: 0.5rem !important;
+    }
+
+    footer h5 {
+        font-size: 1.1rem;
+    }
 }
 
 /* Contenedor general para banderas y logo */

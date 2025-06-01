@@ -119,21 +119,53 @@ html, body {
   color: #FE5D26;
   transition: all 0.3s ease;
   font-size: 3rem;
+  width: 100%;
+  text-align: center;
+  padding: 0 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.logo-text span {
+  display: inline;
 }
 
 .logo-text:hover {
   text-shadow: 0 0 8px rgba(254, 93, 38, 0.5);
 }
 
-@media (max-width: 768px) {
-  .logo {
-    max-width: 10rem;
+@media (max-width: 992px) {
+  .logo-text {
+    font-size: 2.8rem;
   }
 }
 
-@media (max-width: 480px) {
-  .logo {
-    max-width: 11rem;
+@media (max-width: 768px) {
+  .logo-text {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .logo-text {
+    font-size: 2.3rem;
+    padding: 0 0.8rem;
+  }
+}
+
+@media (max-width: 430px) {
+  .logo-text {
+    font-size: 2.1rem;
+    padding: 0 0.6rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .logo-text {
+    font-size: 2rem;
+    padding: 0 0.4rem;
   }
 }
 
@@ -733,17 +765,17 @@ p {
 
 @media (max-width: 576px) {
   .logo-text {
-    font-size: 2rem;
+    font-size: 2.3rem;
   }
   .lead {
     font-size: 1.1rem;
-    padding: 0 1rem;
+    padding: 0 0.8rem;
   }
 }
 
 @media (max-width: 430px) {
   .logo-text {
-    font-size: 1.8rem;
+    font-size: 2.1rem;
   }
   .lead {
     font-size: 1rem;

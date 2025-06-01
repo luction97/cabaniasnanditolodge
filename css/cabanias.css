@@ -45,6 +45,21 @@ body {
     display: flex;
     align-items: center;
     transition: all 0.3s ease;
+    padding: 0.75rem;
+    min-height: 60px;
+}
+
+.caracteristica-card i {
+    flex-shrink: 0;
+    margin-right: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.caracteristica-card span {
+    font-size: 0.9rem;
+    line-height: 1.2;
+    word-wrap: break-word;
+    hyphens: auto;
 }
 
 .caracteristica-card:hover {
@@ -120,6 +135,36 @@ body {
     
     #cabanas {
         padding-top: 1.5rem;
+    }
+    
+    .caracteristica-card {
+        padding: 0.5rem;
+        min-height: 50px;
+    }
+    
+    .caracteristica-card i {
+        font-size: 1rem;
+        margin-right: 0.3rem;
+    }
+    
+    .caracteristica-card span {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 380px) {
+    .caracteristica-card {
+        padding: 0.4rem;
+        min-height: 45px;
+    }
+    
+    .caracteristica-card i {
+        font-size: 0.9rem;
+        margin-right: 0.2rem;
+    }
+    
+    .caracteristica-card span {
+        font-size: 0.75rem;
     }
 }
 

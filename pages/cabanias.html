@@ -5,94 +5,140 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nandito Lodge - Cabañas</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Quicksand:wght@400;600&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="../css/cabanias.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/cabanias.css">
 </head>
 
 <body>
-    <!-- NAV -->
-    <nav class="navbar navbar-light bg-white py-2 shadow-sm fixed-top">
-        <div class="container-fluid d-flex align-items-center">
-            <div class="d-flex align-items-center">
-                <a class="nav-link mx-3 fs-6" href="../index.html"><i class="bi bi-house-door"></i> Inicio</a>
-                <a class="nav-link mx-3 fs-6" href="../pages/cabanias.html"><i class="bi bi-houses"></i> Cabañas</a>
-            </div>
-            <a class="navbar-brand d-flex align-items-center" href="../index.html">
-                <img src="../assets/img/logo-transparente.webp" alt="Logo" height="40" class="me-2">
+    <nav class="navbar navbar-expand py-2 shadow-sm fixed-top">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
+            <!-- Menú siempre visible -->
+            <ul class="navbar-nav d-flex flex-row gap-3 mb-0">
+                <li class="nav-item">
+                    <a class="nav-link fs-6" href="../index.html"><i class="bi bi-house-door"></i> Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fs-6" href="cabanias.html"><i class="bi bi-houses"></i> Cabañas</a>
+                </li>
+            </ul>
+
+            <!-- Logo a la derecha -->
+            <a class="navbar-brand ms-auto" href="../index.html">
+                <img src="../assets/img/logo-transparente-negativo.webp" alt="Logo" style="max-height:30px;">
             </a>
         </div>
     </nav>
 
     <main>
-        <section id="cabanas" class="container my-5">
-            <h2 class="text-center mb-4"><b>Nuestras Cabañas </b></h2>
-
-            <div class="row mb-4">
-                <div class="col-md-6">
-                    <p class="lead">
-                        Contamos con cabañas completamente equipadas, cerca del río, en un entorno natural y tranquilo
-                        en
-                        La Paz, Entre Ríos.
-                        Todas nuestras cabañas ofrecen el confort ideal para descansar en familia, en pareja o con
-                        amigos.
-                    </p>
-                    <ul class="list-unstyled">
-                        <li class="caracteristica"><i class="bi bi-wifi"></i> Wi-Fi</li>
-                        <li class="caracteristica"><i class="bi bi-tv-fill"></i> Televisión</li>
-                        <li class="caracteristica"><i class="bi bi-snow2"></i> Aire acondicionado</li>
-                        <li class="caracteristica"><i class="bi bi-fire"></i> Churrasquera individual</li>
-                        <li class="caracteristica"><i class="bi bi-water"></i> Piscina compartida</li>
-                    </ul>
-
-                    <a href="https://wa.me/5493795585622" target="_blank" class="btn btn-naranja-rec mt-3 mb-3">
-                        <i class="bi bi-whatsapp"></i> Consultar disponibilidad
-                    </a>
+        <section id="cabanas" class="container py-2 mt-2 mb-2">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-6">
+                    <div class="bg-dark bg-opacity-75 p-4 rounded-4 shadow-lg">
+                        <h2 class="display-5 fw-bold mb-4">Nuestras <span class="text-naranja">Cabañas</span></h2>
+                        <p class="lead text-white mb-4">
+                            Contamos con cabañas completamente equipadas, cerca del río, en un entorno natural y tranquilo
+                            en La Paz, Entre Ríos. Todas nuestras cabañas ofrecen el confort ideal para descansar en familia, 
+                            en pareja o con amigos.
+                        </p>
+                        <div class="row g-3 mb-4">
+                            <div class="col-6">
+                                <div class="caracteristica-card p-3 rounded-3 shadow-sm bg-dark bg-opacity-50">
+                                    <i class="bi bi-wifi fs-4"></i>
+                                    <span class="ms-2 text-light">Wi-Fi</span>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="caracteristica-card p-3 rounded-3 shadow-sm bg-dark bg-opacity-50">
+                                    <i class="bi bi-tv-fill fs-4"></i>
+                                    <span class="ms-2 text-light">Televisión</span>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="caracteristica-card p-3 rounded-3 shadow-sm bg-dark bg-opacity-50">
+                                    <i class="bi bi-snow2 fs-4"></i>
+                                    <span class="ms-2 text-light">Aire acondicionado</span>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="caracteristica-card p-3 rounded-3 shadow-sm bg-dark bg-opacity-50">
+                                    <i class="bi bi-thermometer-half fs-4"></i>
+                                    <span class="ms-2 text-light">Calefacción</span>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="caracteristica-card p-3 rounded-3 shadow-sm bg-dark bg-opacity-50">
+                                    <i class="bi bi-fire fs-4"></i>
+                                    <span class="ms-2 text-light">Fogonero</span>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="caracteristica-card p-3 rounded-3 shadow-sm bg-dark bg-opacity-50">
+                                    <i class="bi bi-fire fs-4"></i>
+                                    <span class="ms-2 text-light">Parrillero individual</span>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="caracteristica-card p-3 rounded-3 shadow-sm bg-dark bg-opacity-50">
+                                    <i class="bi bi-house-gear-fill fs-4"></i>
+                                    <span class="ms-2 text-light">Cocina completa</span>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="caracteristica-card p-3 rounded-3 shadow-sm bg-dark bg-opacity-50">
+                                    <i class="bi bi-water fs-4"></i>
+                                    <span class="ms-2 text-light">Piscina compartida</span>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/5493795585622" target="_blank" class="btn btn-naranja btn-lg px-5 py-3 shadow-lg w-100">
+                            <i class="bi bi-whatsapp me-2"></i>Consultar disponibilidad
+                        </a>
+                    </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-lg-6">
                     <!-- Carrusel de imágenes -->
-                    <div id="carouselCabanas" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner rounded shadow">
+                    <div id="carouselCabanas" class="carousel slide shadow-lg rounded-4 overflow-hidden" data-bs-ride="carousel">
+                        <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="../assets/img/cabanias/1.webp" class="d-block w-100 shadow-sm" alt="Cabaña 1"
+                                <img src="../assets/img/cabanias/1.webp" class="d-block w-100" alt="Cabaña 1"
                                     style="cursor: pointer;" onclick="openModal(this.src)">
                             </div>
                             <div class="carousel-item">
-                                <img src="../assets/img/cabanias/2.webp" class="d-block w-100 shadow-sm" alt="Cabaña 2"
+                                <img src="../assets/img/cabanias/2.webp" class="d-block w-100" alt="Cabaña 2"
                                     style="cursor: pointer;" onclick="openModal(this.src)">
                             </div>
                             <div class="carousel-item">
-                                <img src="../assets/img/cabanias/4.webp" class="d-block w-100 shadow-sm" alt="Cabaña 4"
+                                <img src="../assets/img/cabanias/4.webp" class="d-block w-100" alt="Cabaña 4"
                                     style="cursor: pointer;" onclick="openModal(this.src)">
                             </div>
                             <div class="carousel-item">
-                                <img src="../assets/img/cabanias/5.webp" class="d-block w-100 shadow-sm" alt="Cabaña 5"
+                                <img src="../assets/img/cabanias/5.webp" class="d-block w-100" alt="Cabaña 5"
                                     style="cursor: pointer;" onclick="openModal(this.src)">
                             </div>
                             <div class="carousel-item">
-                                <img src="../assets/img/cabanias/6.webp" class="d-block w-100 shadow-sm" alt="Cabaña 6"
+                                <img src="../assets/img/cabanias/6.webp" class="d-block w-100" alt="Cabaña 6"
                                     style="cursor: pointer;" onclick="openModal(this.src)">
                             </div>
                             <div class="carousel-item">
-                                <img src="../assets/img/cabanias/7.webp" class="d-block w-100 shadow-sm" alt="Cabaña 7"
+                                <img src="../assets/img/cabanias/7.webp" class="d-block w-100" alt="Cabaña 7"
                                     style="cursor: pointer;" onclick="openModal(this.src)">
                             </div>
                             <div class="carousel-item">
-                                <img src="../assets/img/cabanias/8.webp" class="d-block w-100 shadow-sm" alt="Cabaña 8"
+                                <img src="../assets/img/cabanias/8.webp" class="d-block w-100" alt="Cabaña 8"
                                     style="cursor: pointer;" onclick="openModal(this.src)">
                             </div>
                             <div class="carousel-item">
-                                <img src="../assets/img/cabanias/9.webp" class="d-block w-100 shadow-sm" alt="Cabaña 9"
+                                <img src="../assets/img/cabanias/9.webp" class="d-block w-100" alt="Cabaña 9"
                                     style="cursor: pointer;" onclick="openModal(this.src)">
                             </div>
                             <div class="carousel-item">
-                                <img src="../assets/img/cabanias/10.webp" class="d-block w-100 shadow-sm"
-                                    alt="Cabaña 10" style="cursor: pointer;" onclick="openModal(this.src)">
+                                <img src="../assets/img/cabanias/10.webp" class="d-block w-100" alt="Cabaña 10"
+                                    style="cursor: pointer;" onclick="openModal(this.src)">
                             </div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselCabanas"
@@ -108,12 +154,12 @@
             </div>
         </section>
     </main>
+
     <!-- Modal para ver imágenes en grande -->
     <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div class="modal-content">
-                <!-- Botón "X" posicionado encima de la imagen -->
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            <div class="modal-content bg-dark">
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
                 <div class="modal-body p-0">
                     <img src="" class="img-fluid w-100" id="modalImage" alt="Imagen ampliada" />
                 </div>
@@ -121,20 +167,65 @@
         </div>
     </div>
 
+    <footer class="bg-dark text-light py-5 position-relative overflow-hidden">
+        <!-- Elemento decorativo de fondo -->
+        <div class="position-absolute top-0 start-0 w-100 h-100" style="background: linear-gradient(45deg, rgba(254,93,38,0.05) 0%, rgba(0,0,0,0) 100%); z-index: 0;"></div>
+        
+        <div class="container position-relative" style="z-index: 1;">
+            <div class="row g-4">
+                <!-- Logo y descripción -->
+                <div class="col-lg-4 text-center text-lg-start">
+                    <img src="../assets/img/logo-transparente-negativo.webp" alt="Nandito Lodge" class="mb-3" style="max-height:40px;">
+                    <p class="text-white">Respirá naturaleza, disfrutá de la calma y viví la pesca en su estado más puro.</p>
+                </div>
 
-    <footer class="text-center py-4 bg-white shadow">
-        <div class="navbar navbar-light bg-white justify-content-center py-3">
-            <a href="../index.html" class="nav-link mx-3">Inicio</a>
-            <a href="../pages/cabanias.html" class="nav-link mx-3">Cabañas</a>
-        </div>
-        <hr>
-        <div class="d-flex justify-content-between px-3">
-            <span>&copy; 2025 Nandito Lodge</span>
-            <span style="font-size: xx-small;">Desarrollado por Lucas Siano.</span>
+                <!-- Enlaces rápidos -->
+                <div class="col-lg-4 text-center">
+                    <h5 class="mb-3 fw-bold">Enlaces rápidos</h5>
+                    <div class="d-flex flex-column gap-2">
+                        <a href="../index.html" class="text-light text-decoration-none hover-effect">Inicio</a>
+                        <a href="cabanias.html" class="text-light text-decoration-none hover-effect">Cabañas</a>
+                    </div>
+                </div>
+
+                <!-- Contacto -->
+                <div class="col-lg-4 text-center text-lg-end">
+                    <h5 class="mb-3 fw-bold">Contacto</h5>
+                    <div class="d-flex flex-column gap-2">
+                        <a href="tel:+5493795585622" class="text-light text-decoration-none hover-effect">
+                            <i class="bi bi-telephone me-2"></i>+54 9 3795585622
+                        </a>
+                        <a href="https://wa.me/5493795585622" class="text-light text-decoration-none hover-effect" target="_blank">
+                            <i class="bi bi-whatsapp me-2"></i>WhatsApp
+                        </a>
+                    </div>
+                    <div class="d-flex justify-content-center justify-content-lg-end gap-3 mt-3">
+                        <a href="https://www.facebook.com/profile.php?id=61572169320489" target="_blank" class="text-light fs-4 hover-effect">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="https://instagram.com/nanditolodge" target="_blank" class="text-light fs-4 hover-effect">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="my-4 border-secondary">
+
+            <div class="text-center">
+                <small class="text-light-emphasis">&copy; 2025 Nandito Lodge - Todos los derechos reservados.</small>
+                <p class="text-light-emphasis mt-2" style="font-size: x-small;">Desarrollado por Lucas Siano</p>
+            </div>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- BOTÓN WHATSAPP FLOTANTE -->
+    <a href="https://wa.me/5493795585622" class="btn-whatsapp" target="_blank" aria-label="WhatsApp"
+        title="Reserva tu estadía">
+        <img src="../assets/img/whatsapp.webp" alt="WhatsApp">
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         function openModal(imageSrc) {
             const modal = new bootstrap.Modal(document.getElementById('imageModal'));
